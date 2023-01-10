@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+$btn: hsl(25, 97%, 53%);
+$header: hsl(0, 0%, 100%);
+$text: hsl(217, 12%, 63%);
+$select: hsl(216, 12%, 54%);
+$card: hsl(213, 19%, 18%);
+$bg: hsl(216, 12%, 8%);
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    main {
+        width: 100vw;
+        height: 100vh;
+        background-color: $bg;
+        display: grid;
+        place-items: center;
+        font-size: 15px;
+        font-family: 'Overpass', sans-serif;
+
+        .card {
+            max-width: 300px;
+            border-radius: 20px;
+            padding: 1.5em;
+            background-color: $card;
+
+            &[data-aktif="no"] {
+                display: none;
+            }
+
+            img {
+                padding: 1em;
+                background-color: lighten($color: $card, $amount: 3);
+                border-radius: 50%;
+            }
+
+            h1 {
+                color: $header;
+                font-weight: 700;
+            }
+
+            p {
+                color: $text;
+                font-weight: 400;
+            }
+
+            .select {
+                width: 100%;
+                padding: 1em 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    margin-top: 0;
+                    width: 15%;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    color: $header;
+                    border: transparent;
+                    background-color: lighten($color: $card, $amount: 3);
+                    transition: 500ms;
+
+                    &:hover {
+                        background-color: $btn;
+                        cursor: pointer;
+                        color: $header;
+                    }
+
+                    &[data-pilih="yes"] {
+                        background-color: $select;
+                    }
+                }
+            }
+
+            button {
+                margin-top: 1.5em;
+                width: 100%;
+                padding: .8em;
+                border-radius: 20px;
+                border: transparent;
+                background-color: $btn;
+                color: $header;
+                font-size: 1em;
+                text-transform: uppercase;
+                transition: 500ms;
+
+                &:hover {
+                    background-color: $header;
+                    color: $btn;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .selected {
+            max-width: 300px;
+            background-color: $card;
+            padding: 1.5em;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &[data-aktif="no"] {
+                display: none;
+            }
+
+            p#pilihan {
+                padding: .5em 1em;
+                color: $btn;
+                background-color: lighten($color: $card, $amount: 3);
+                border-radius: 20px;
+            }
+
+            h1 {
+                color: $header;
+            }
+
+            p {
+                color: $text;
+                text-align: center;
+            }
+
+            button {
+                width: 90%;
+                margin-top: .8em;
+                padding: .6em;
+                border-radius: 20px;
+                border: transparent;
+                background-color: $btn;
+                color: $header;
+                font-size: 1em;
+                text-transform: uppercase;
+                transition: 500ms;
+
+                &:hover {
+                    background-color: $header;
+                    color: $btn;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

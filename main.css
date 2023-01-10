@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+body main {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(216deg, 12%, 8%);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+}
+body main .card {
+  max-width: 300px;
+  border-radius: 20px;
+  padding: 1.5em;
+  background-color: hsl(213deg, 19%, 18%);
+}
+body main .card[data-aktif=no] {
+  display: none;
+}
+body main .card img {
+  padding: 1em;
+  background-color: #2b3540;
+  border-radius: 50%;
+}
+body main .card h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+}
+body main .card p {
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+}
+body main .card .select {
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .card .select button {
+  margin-top: 0;
+  width: 15%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  color: hsl(0deg, 0%, 100%);
+  border: transparent;
+  background-color: #2b3540;
+  transition: 500ms;
+}
+body main .card .select button:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+  color: hsl(0deg, 0%, 100%);
+}
+body main .card .select button[data-pilih=yes] {
+  background-color: hsl(216deg, 12%, 54%);
+}
+body main .card button {
+  margin-top: 1.5em;
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 20px;
+  border: transparent;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: 500ms;
+}
+body main .card button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+}
+body main .selected {
+  max-width: 300px;
+  background-color: hsl(213deg, 19%, 18%);
+  padding: 1.5em;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .selected[data-aktif=no] {
+  display: none;
+}
+body main .selected p#pilihan {
+  padding: 0.5em 1em;
+  color: hsl(25deg, 97%, 53%);
+  background-color: #2b3540;
+  border-radius: 20px;
+}
+body main .selected h1 {
+  color: hsl(0deg, 0%, 100%);
+}
+body main .selected p {
+  color: hsl(217deg, 12%, 63%);
+  text-align: center;
+}
+body main .selected button {
+  width: 90%;
+  margin-top: 0.8em;
+  padding: 0.6em;
+  border-radius: 20px;
+  border: transparent;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: 500ms;
+}
+body main .selected button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
